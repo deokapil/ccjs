@@ -20,3 +20,19 @@ export function getCookie(cname) {
   }
   return "";
 }
+
+export async function handleConsent(value, options) {
+  setCookie("consent_status", value);
+  const response = await fetch(`${options.apiUrl}/api/set-consent`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ccUuid: options.tenentUid,
+      status: value,
+    }),
+  });
+  const gid = await response.json();
+  console.log(gid);
+}

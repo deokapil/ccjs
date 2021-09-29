@@ -1,6 +1,7 @@
 import css from "./style.css";
 import displayPopup from "./main";
 import { getCookie, setCookie } from "./utils";
+
 export async function intiCCmgt() {
   // get interesting attributes
   const scriptTag = document.querySelector("script[data-tenent-uid]");
@@ -31,7 +32,8 @@ export async function intiCCmgt() {
       console.log("Has Already agreed to all");
       break;
     default:
-      displayPopup(cont);
+      const popup_vars = { apiUrl, tenentUid, option: cont };
+      displayPopup(popup_vars);
   }
 
   console.log(cont);

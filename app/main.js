@@ -1,6 +1,6 @@
-import { setCookie } from "./utils";
+import { handleConsent } from "./utils";
 
-function displayPopup(option) {
+function displayPopup({ option, ...rest }) {
   var isCTA2 = option.design.cookiePolicy === "CTA-2";
 
   var modalStyle =
@@ -77,14 +77,14 @@ function displayPopup(option) {
     var accept = document.getElementById("accptButton");
     accept.onclick = function () {
       elemDiv.style.display = "none";
-      setCookie("consent_status", "Agreed");
+      handleConsent("Agreed", rest);
     };
 
     var accept = document.getElementById("refuseButton");
     accept.onclick = function () {
       alert("Cookies are disabled!");
       elemDiv.style.display = "none";
-      setCookie("consent_status", "Essential");
+      handleConsent("Essential", rest);
     };
   } else {
     var accept = document.getElementById("dismissButton");
