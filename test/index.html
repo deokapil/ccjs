@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h2>Hello World</h2>
+    <script>
+      (function () {
+        var s = document.createElement("script");
+        s.src = "/src/build/index_bundle.js";
+        s.setAttribute(
+          "data-tenent-uid",
+          "5bca5863-4522-4406-a98e-00e039537f48"
+        );
+        s.setAttribute("data-api-url", "http://localhost:3001");
+        var parent_node = document.head || document.body;
+        parent_node.appendChild(s);
+        s.addEventListener("load", function () {
+          window.intiCCmgt();
+        });
+      })();
+    </script>
+  </body>
+</html>

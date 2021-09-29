@@ -1,0 +1,33 @@
+{
+  "_id": "614afa3bd3496f9e340a7c59",
+  "domainGroup": "trainme.com",
+  "domain": "blogs.trainme.com",
+  "primaryOwner": "kapil.pande@gmail.com",
+  "sendNotifications": false,
+  "steps": 1,
+  "createdAt": "2021-09-22T09:41:15.840Z",
+  "updatedAt": "2021-09-22T09:44:23.207Z",
+  "__v": 0,
+  "design": {
+    "_id": "614afaf7d3496f9e340a7c5b",
+    "consent": "614afa3bd3496f9e340a7c59",
+    "cookiePolicy": "CTA-2",
+    "bannerPosition": "Bottom-Right",
+    "policyLink": "http://policy.trainme.com",
+    "policyLinkText": "Read More",
+    "layout": "Block",
+    "bannerColor": "#f34556",
+    "bannerText": "#ffffff",
+    "buttonColor": "#3478a2",
+    "buttonText": "#f1f1f1",
+    "refuseButtonColor": "#891213",
+    "refuseButtonText": "#f2f3f4",
+    "disclaimer": "Some good disclaimer test",
+    "dismissButtonText": "",
+    "acceptCookieButtonText": "Accept Cookies",
+    "refuseCookieButtonText": "Deny Cookies",
+    "createdAt": "2021-09-22T09:44:23.201Z",
+    "updatedAt": "2021-09-22T09:44:23.201Z",
+    "__v": 0
+  }
+}
